@@ -18,5 +18,25 @@
   "first_name": "Link",
   "last_name": "Zelda",
   "course": "Climbing 300"
+ },
+ {
+  "first_name": "Tori",
+  "last_name": "Dziekan",
+  "course": "Geomorphology 101"
+ },
+ {
+  "first_name": "Georgie",
+  "last_name": "Bright",
+  "course": "Creative Writing"
+ },
+ {
+  "first_name": "Kirk",
+  "last_name": "York",
+  "course": "Python 101"
+ },
+ {
+  "first_name": "Greta",
+  "last_name": "Johnson",
+  "course": "Python 201"
  }
 ]

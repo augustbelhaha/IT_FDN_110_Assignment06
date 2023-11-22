@@ -4,6 +4,7 @@
 # Change Log: (Who, When, What)
 #   RRoot,1/1/2030,Created Script
 #   ABelhumeur, 11/19/2023, Began Assignment06
+#   ABelhumeur, 11/21/2023, Program Polish
 # ------------------------------------------------------------------------------------------ #
 
 # Import Libraries
@@ -68,6 +69,8 @@ class FileProcessor:
         try:
             file = open(file_name, 'w')
             json.dump(student_data, file, indent=1)
+            file.close()
+            print("All entries have been saved to the file 'Enrollments.json'.")
             return True
         except TypeError as e:
             IO.output_error_message('JSON data was malformed', e)
@@ -97,11 +100,11 @@ class IO:
 
     @staticmethod
     def input_menu_choice(menu: str) -> str:
-        '''
+        """
         This function inputs the user's menu selection of either 1, 2, 3, or 4.
         :param menu: This variable is a string value that is the user's input.
         :return: Return the user's input.
-        '''
+        """
         global menu_choice
         menu_choice = input(menu)
         while menu_choice not in ['1', '2', '3', '4']:
@@ -134,7 +137,7 @@ class IO:
         except ValueError as e:
             IO.output_error_message("User entered invalid information.", e)
         except Exception as e:
-           IO.output_error_message("Unhandled exception", e)
+            IO.output_error_message("Unhandled exception", e)
         return student_data
 
     @staticmethod
@@ -170,3 +173,5 @@ while True:
         break
     else:
         print("I did not understand that command.")
+
+print("Program Ended")
